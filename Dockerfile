@@ -4,6 +4,7 @@ FROM nvcr.io/nvidia/cuda:12.9.1-devel-ubi9
 # Install system dependencies, upgrade Python to 3.12, and then install uv.
 # We clean up the dnf cache in the same layer to minimize image size.
 RUN dnf install -y --setopt=install_weak_deps=0 \
+        libcudnn9-cuda-12 \
         python3.12 \
         python3.12-devel \
         python3.12-pip \
