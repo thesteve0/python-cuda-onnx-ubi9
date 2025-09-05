@@ -22,4 +22,4 @@ COPY requirements.txt ./
 
 # Install the Python dependencies using uv. This layer is now cached.
 # It will only be rebuilt if requirements.txt changes.
-RUN uv pip install --no-cache -r requirements.txt
+RUN uv pip install --no-cache --system -r requirements.txt
